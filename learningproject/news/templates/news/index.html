@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load news_tags %}
+
+{% block title %} Новости {% endblock %}
+
+{% block body %}
+<div class="main">
+{% news as news %}
+{% for item in news %}
+{% if item.is_publish == True %}
+<div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal" style="text-align:center;">{{item.title}}({{item.category}})</h4>
+          </div>
+            {% if item.photo %}
+           <div class="main">
+
+               <img src="{{ item.photo.url }}" alt="" width="400" height="200">
+           </div>
+
+          <div class="card-body">
+              <div class="main-text">
+            {{item.content|linebreaks|truncatewords:70}}<hr>
+          </div>
+              {% else %}
+        <div class="card-body">
+          <div class="main">
+            {{item.content|linebreaks|truncatewords:70}}<hr>
+          </div>
+            {% endif %}
+              <div class="main-photo">
+             <div class="d-grid gap-2 col-6 mx-auto">
+                 <button class="btn btn-primary" type="button">Читать далее</button>
+             </div>
+            <p style=" text-align:center;">{{item.created_at|date:"Y-m-d"}}</p>
+          </div>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} {{category1}} {% endblock %}
+
+{% block body %}
+<div class="main">
+{% if news %}
+
+{% for item in news %}
+<div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal" style="text-align:center;">{{item.title}}({{item.category}})</h4>
+          </div>
+          <div class="card-body">
+            {{item.content|linebreaks|truncatewords:70}}<hr>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="{% url 'readmore' item.pk %}"><i>Читать далее</i></a>
+              </div>
+            <p style=" text-align:center;">{{item.created_at|date:"Y-m-d"}}</p>
+          </div>
+        </div>
+      </div>
+{% endfor %}
+{% else %}
+
+    <div id="upps">К сожалению на данный момент нет новостей по категории {{category1}}!!!</div>
+
+{% endif %}
+</div>
+{% endblock %}
+
+
+
+

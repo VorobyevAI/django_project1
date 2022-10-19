@@ -1,0 +1,97 @@
+body{
+    background-image: url('https://avatanplus.com/files/resources/original/5750855fca0bd1551288fe54.jpg');
+    background-attachment: fixed;
+}
+.color-hr {
+    color: white;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #212529; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0px;
+}
+
+/* The navigation menu links */
+.sidenav a, .sidenav p {
+    padding: 3px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+
+}
+div .card-body{
+    font-size: 12px;
+}
+/* Style page content */
+.main {
+    margin-left: 460px; /* Same as the width of the sidebar */
+    margin-right: 460px;
+    padding: 10px 10px;
+
+.main-content img {
+   float: left;
+   padding: 0 20px 20px 0;
+}
+
+
+}
+.main-text {
+    margin-left: 460px; /* Same as the width of the sidebar */
+    padding: 10px 10px;
+
+}
+.main-photo {
+    float: left;
+    margin-left: 0px; /* Same as the width of the sidebar */
+    padding: 10px 10px;
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.topnav {
+    background-color: #212529;
+    overflow: hidden;
+
+}
+
+#upps {
+    color: white;
+    margin-top: 200px;
+    margin-left: 25%;
+    font-size: 25px;
+}
+
+.topnav a {
+    float: right;
+    color: #818181;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+
+.topnav a:hover {
+    color: #f1f1f1;
+}
+
+

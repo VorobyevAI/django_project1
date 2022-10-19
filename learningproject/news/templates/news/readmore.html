@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="main">
+<div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal" style="text-align:center;">{{new.title}}({{new.category}})</h4>
+          </div>
+          <div class="card-body" style="font-size: 20px;">
+            {{new.content|linebreaks}}<hr>
+              {% if new.photo %}
+              <div class="media-body">
+              <img src= '{{new.photo.url }}' alt="" width="400" height="200"><hr>
+              </div>
+              {% endif %}
+            <p style=" text-align:center;">{{new.created_at|date:"Y-m-d"}}</p>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
